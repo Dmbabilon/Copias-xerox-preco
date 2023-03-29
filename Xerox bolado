@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int num_copias;
+    float valor_pago;
+
+    printf("Informe o total de cópias: ");
+    scanf("%d", &num_copias);
+
+    if (num_copias <= 100) {
+        valor_pago = num_copias * 0.25;
+    } else {
+        valor_pago = 100 * 0.25 + (num_copias - 100) * 0.20;
+    }
+
+    printf("Valor a ser pago: R$ %.2f\n", valor_pago);
+
+    return 0;
+}
